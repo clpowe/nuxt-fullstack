@@ -1,7 +1,7 @@
-module.export = {
-	darkMode: 'class',
-	content: [],
-	theme: {
-		plugins: []
-	}
-}
+module.exports = {
+  darkMode: "class",
+  content: [],
+  theme: {
+    plugins: [],
+  },
+};
