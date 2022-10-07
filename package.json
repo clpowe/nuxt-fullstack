@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@prisma/client": "^4.4.0",
+    "bcrypt": "^5.1.0",
     "postcss": "^8.4.17",
     "webpack": "^5.74.0"
   },
