@@ -9,15 +9,15 @@ const name = ref(null);
 const errors = ref(new Map());
 let response = ref<FormValidation>({ hasErrors: false });
 
-async function postRegisterForm() {
-  response.value = await registerWithEmail(
+const postRegisterForm = async () => {
+  await registerWithEmail(
     username.value,
     name.value,
     email.value,
     password.value
   );
   errors.value = response.value.errors;
-}
+};
 </script>
 
 <template>

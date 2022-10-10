@@ -7,8 +7,8 @@ export async function getUserByEmail(email:string): Promise<IUser> {
       email: email
     },
     select:{
-      id:true,
-      username:true
+      id: true,
+      username: true
     }
   })
 }
@@ -19,8 +19,8 @@ export async function getUserByUserName(username: string): Promise<IUser> {
       username: username
     },
     select:{
-      id:true,
-      username:true
+      id: true,
+      username: true
     }
   })
 }

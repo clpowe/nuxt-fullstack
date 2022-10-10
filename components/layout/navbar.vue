@@ -83,7 +83,7 @@ const setColorTheme = (newTheme: Theme) => {
             Sign in
           </nuxt-link>
 
-          <!-- <User v-if="user" :user="user" /> -->
+          <User v-if="user" :user="user" />
 
           <nuxt-link
             v-if="!user"
