@@ -11,12 +11,16 @@
     "@nuxtjs/color-mode": "^3.1.7",
     "@nuxtjs/tailwindcss": "^5.0.0-4",
     "nuxt": "3.0.0-rc.11",
-    "prisma": "^4.4.0"
+    "prisma": "^4.4.0",
+    "@types/node": "18.8.0"
   },
   "dependencies": {
     "@prisma/client": "^4.4.0",
+    "@vueuse/core": "^9.3.0",
     "bcrypt": "^5.1.0",
     "postcss": "^8.4.17",
+    "stripe": "^10.13.0",
+    "uuid": "^9.0.0",
     "webpack": "^5.74.0"
   },
   "prisma": {
