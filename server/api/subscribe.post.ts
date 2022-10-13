@@ -1,5 +1,5 @@
 import { getUserById } from "~/server/database/repositories/userRepository"
-import { getSubscribeUrl } from "~/server/services/stripeSevices"
+import { getSubscribeUrl } from "~/server/services/stripeService"
 import { updateStripeCustomerId } from "~/server/database/repositories/userRepository"
 
 export default defineEventHandler(async (event) => {
@@ -9,6 +9,12 @@ export default defineEventHandler(async (event) => {
 
  const user = await getUserById(parseInt(userId))
 
- 
+ const { url, user: customer, shouldUpdateUser } = await getSubscribeUrl(lookupKey, user)
 
-}
+ if(shouldUpdateUser) {
+  await updateStripeCustomerId(customer)
+ }
+ 
+ await sendRedirect(event,url)
+
+})
